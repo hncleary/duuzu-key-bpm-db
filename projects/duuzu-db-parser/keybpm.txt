@@ -71,7 +71,7 @@ for example, (-20) means the track is 20 cents flat. to get it in tune with stan
 to conclude, 
 
 if a track is listed as the following:
-	• Artist - Track (Aphr+30) (~75/150)
+	/• Artist - Track (Aphr+30) (~75/150)
 then the track is in A phrygian, is 30 cents sharp, and has a bpm of around 75 or 150, depending on how you count the bpm.
 
 any other important information, such as chord progressions or notable lyrics, will also be listed in brackets.

@@ -1,13 +1,10 @@
 {
-	"folders": [
-		{
-			"path": "."
-		}
-	],
-	"settings": {
-		"cSpell.words": [
-			"duuzu",
-			"keybpm"
-		]
-	}
+  "folders": [
+    {
+      "path": "."
+    }
+  ],
+  "settings": {
+    "cSpell.words": ["Acapella", "bpms", "Bpms", "duuzu", "keybpm"]
+  }
 }

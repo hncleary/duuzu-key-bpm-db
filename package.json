@@ -7,7 +7,11 @@
     "projects/duuzu-db-web"
   ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "npm run serve-site",
+    "serve-site": "npm run start -w duuzu-db-web",
+    "test-site": "npm run test -w duuzu-db-web",
+    "build-site": "npm run build -w duuzu-db-web",
+    "parse-db": "npm run parse-db -w duuzu-db-parser"
   },
   "author": "",
   "license": "ISC"

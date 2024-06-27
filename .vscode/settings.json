@@ -1,0 +1,8 @@
+{
+  "cSpell.words": ["Acapella", "Bpms", "duuzu", "keybpm"],
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
+}
