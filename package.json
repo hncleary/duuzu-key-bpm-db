@@ -1,0 +1,14 @@
+{
+  "name": "duuzu-key-bpm-db",
+  "version": "1.0.0",
+  "description": "song key and bpm database parser and frontend",
+  "workspaces": [
+    "projects/duuzu-db-parser",
+    "projects/duuzu-db-web"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
