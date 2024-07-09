@@ -9,6 +9,9 @@
     "test": "ng test",
     "serve:ssr:duuzu-db-web": "node dist/duuzu-db-web/server/server.mjs"
   },
+  "engines": {
+    "node": ">=18.0.0"
+  },
   "private": true,
   "dependencies": {
     "@angular/animations": "^18.0.0",
