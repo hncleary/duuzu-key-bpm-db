@@ -19,43 +19,49 @@ import { HeaderComponent } from './components/header/header.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { MatTabsModule } from '@angular/material/tabs';
 import { NgxMatSearchbarModule } from 'ngx-mat-searchbar';
-import {
-  provideHttpClient,
-  withInterceptorsFromDi,
-} from '@angular/common/http';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
+import { ScrollingModule } from '@angular/cdk/scrolling';
+import { GenericFilterPipe } from './pipes/generic-filter.pipe';
+import { SongDetailsComponent } from './pages/home/song-details/song-details.component';
+import { TruncationTipDirective } from './directives/truncation-tip.directive';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HomeComponent,
-    AboutComponent,
-    FooterComponent,
-    HeaderComponent,
-  ],
-  imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    MatToolbarModule,
-    MatIconModule,
-    MatDividerModule,
-    MatCardModule,
-    MatButtonModule,
-    MatDividerModule,
-    MatFormFieldModule,
-    MatInputModule,
-    FormsModule,
-    MatButtonModule,
-    MatTooltipModule,
-    MatTabsModule,
-    AppRoutingModule,
-    NgxMatSearchbarModule,
-  ],
-  providers: [
-    MatTooltip,
-    MatIconRegistry,
-    provideAnimationsAsync(),
-    provideHttpClient(withInterceptorsFromDi()),
-  ],
-  bootstrap: [AppComponent],
+    declarations: [
+        AppComponent,
+        HomeComponent,
+        AboutComponent,
+        FooterComponent,
+        HeaderComponent,
+        GenericFilterPipe,
+        SongDetailsComponent,
+        TruncationTipDirective,
+    ],
+    imports: [
+        BrowserModule,
+        BrowserAnimationsModule,
+        MatToolbarModule,
+        MatIconModule,
+        MatDividerModule,
+        MatCardModule,
+        MatButtonModule,
+        MatDividerModule,
+        MatFormFieldModule,
+        MatInputModule,
+        FormsModule,
+        MatButtonModule,
+        MatTooltipModule,
+        MatTabsModule,
+        AppRoutingModule,
+        NgxMatSearchbarModule,
+        ScrollingModule,
+    ],
+    providers: [
+        MatTooltip,
+        MatIconRegistry,
+        provideAnimationsAsync(),
+        provideHttpClient(withInterceptorsFromDi()),
+        TruncationTipDirective,
+    ],
+    bootstrap: [AppComponent],
 })
 export class AppModule {}

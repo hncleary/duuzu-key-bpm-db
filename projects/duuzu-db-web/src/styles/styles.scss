@@ -1,6 +1,6 @@
 // Custom Theming for Angular Material
 // For more information: https://material.angular.io/guide/theming
-@use "@angular/material" as mat;
+@use '@angular/material' as mat;
 // Plus imports for other components in your app.
 
 // Include the common styles for Angular Material. We include this here so that you only
@@ -10,23 +10,23 @@
 
 // Define the theme object.
 $duuzu-db-web-theme: mat.define-theme(
-  (
-    color: (
-      theme-type: light,
-      primary: mat.$cyan-palette,
-      tertiary: mat.$blue-palette,
-    ),
-    density: (
-      scale: 0,
-    ),
-  )
+    (
+        color: (
+            theme-type: light,
+            primary: mat.$cyan-palette,
+            tertiary: mat.$blue-palette,
+        ),
+        density: (
+            scale: 0,
+        ),
+    )
 );
 
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
 :root {
-  @include mat.all-component-themes($duuzu-db-web-theme);
+    @include mat.all-component-themes($duuzu-db-web-theme);
 }
 
 // Comment out the line below if you want to use the pre-defined typography utility classes.
@@ -38,18 +38,32 @@ $duuzu-db-web-theme: mat.define-theme(
 
 html,
 body {
-  height: 100%;
-  width: 100%;
-  min-width: 300px;
-  margin: 0;
+    height: 100%;
+    width: 100%;
+    min-width: 300px;
+    margin: 0;
 }
 body {
-  margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
+    margin: 0;
+    font-family: Roboto, 'Helvetica Neue', sans-serif;
 }
 p,
 h1,
 h2,
 h3 {
-  margin: 0;
+    margin: 0;
+}
+
+// Scrollbar
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
 }

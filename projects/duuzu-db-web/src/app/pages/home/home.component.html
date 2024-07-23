@@ -1,8 +1,21 @@
 <div class="search-container">
-  <ngx-mat-searchbar />
+    <ngx-mat-searchbar (change)="onFilterChange($event)" />
+    <!-- TODO - filtering / sorting options -->
 </div>
 
 <div class="list-container">
-  <!-- TODO - filtering / sorting options -->
-  <!-- TODO - cdk virtual scroll list of all database item -->
+    <div class="list">
+        <!-- Song List -->
+        <cdk-virtual-scroll-viewport [itemSize]="65">
+            <ng-container *cdkVirtualFor="let song of songDetailsList | genericFilter : filterValue">
+                <div class="item">
+                    <app-song-details [details]="song" />
+                </div>
+            </ng-container>
+        </cdk-virtual-scroll-viewport>
+    </div>
+    <!-- Song List Filter Count -->
+    <div class="list-details">
+        Showing {{ (songDetailsList | genericFilter : filterValue).length }} of {{ songDetailsList.length }} items
+    </div>
 </div>

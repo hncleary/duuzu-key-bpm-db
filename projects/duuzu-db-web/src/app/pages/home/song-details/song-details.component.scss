@@ -1,0 +1,36 @@
+@import '../../../../styles/mixins.scss';
+
+:host {
+    height: 100%;
+    width: 100%;
+    @include flex-row-center();
+}
+
+$actions-container-width: 150px;
+
+.details-container {
+    height: 100%;
+    width: calc(100% - $actions-container-width);
+    padding: 0.3rem;
+    position: relative;
+    @include flex-col-center();
+    .line {
+        width: 100%;
+        position: relative;
+        line-clamp: 1;
+    }
+    font-size: 0.9rem;
+}
+
+mat-divider {
+    height: 85%;
+    color: whitesmoke;
+}
+
+$actions-padding: 0.3rem;
+.actions-container {
+    @include flex-col-center();
+    height: 100%;
+    padding: $actions-padding;
+    width: calc($actions-container-width - 2 * $actions-padding);
+}

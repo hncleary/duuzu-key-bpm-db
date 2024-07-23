@@ -1,0 +1,55 @@
+<div class="details-container">
+    <div class="line" appTruncationTip>
+        <b>Name:</b>
+        {{ details.name }}
+    </div>
+    <div class="line" appTruncationTip>
+        <b>Artist:</b>
+        {{ details.artist }}
+    </div>
+    @if(!!details.source) {
+    <div class="line" appTruncationTip>
+        <b>Source:</b>
+        {{ details.source }}
+    </div>
+    }
+    <div class="line" appTruncationTip>
+        <b>Main Keys:</b>
+        <ng-container *ngFor="let key of details.mainKeys">
+            {{ key }}
+        </ng-container>
+    </div>
+    @if(details.subKeys.length > 0) {
+    <div class="line" appTruncationTip>
+        <b>Sub-Keys:</b>
+        <ng-container *ngFor="let key of details.subKeys">
+            {{ key }}
+        </ng-container>
+    </div>
+    }
+    <div class="line" appTruncationTip>
+        <b>BPMs:</b>
+        <ng-container *ngFor="let bpm of details.bpms">
+            {{ bpm }}
+        </ng-container>
+    </div>
+    @if(!!details.type) {
+    <div class="line" appTruncationTip>
+        <b>Type:</b>
+        {{ details.type }}
+    </div>
+    }
+</div>
+
+<mat-divider [vertical]="true"></mat-divider>
+
+<div class="actions-container">
+    <!-- Youtube Search Button -->
+    <button
+        mat-raised-button
+        (click)="onYoutubeSearchClick()"
+        matTooltip="Open a new tab searching for this song on YouTube">
+        <mat-icon>search</mat-icon>
+        Search YouTube
+    </button>
+</div>

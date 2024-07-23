@@ -1,0 +1,11 @@
+@import '../../../styles/mixins.scss';
+
+:host {
+    @include flex-col-center();
+}
+
+.about-container {
+    @include flex-col-center();
+    padding: 1rem;
+    width: 350px;
+}

@@ -1,26 +1,56 @@
-@import "../../../styles/mixins.scss";
+@import '../../../styles/mixins.scss';
 
 :host {
-  width: 100%;
-  @include flex-col-center();
+    height: 100%;
+    width: 100%;
+    @include flex-col-center();
 }
 
 $search-container-height: 100px;
 
 .search-container {
-  $search-padding: 1rem;
-  height: calc($search-container-height - $search-padding * 2);
-  width: calc(100% - $search-padding * 2);
-  min-width: calc(325px - $search-padding * 2);
-  max-width: calc(700px - $search-padding * 2);
-  padding: $search-padding;
+    $search-padding: 1rem;
+    height: calc($search-container-height - $search-padding * 2);
+    width: calc(100% - $search-padding * 2);
+    min-width: calc(325px - $search-padding * 2);
+    max-width: calc(700px - $search-padding * 2);
+    padding: $search-padding;
 }
 
 .list-container {
-  $list-padding: 1rem;
-  height: calc(100% - $search-container-height - $list-padding * 2);
-  width: calc(100% - $list-padding * 2);
-  min-width: calc(325px - $list-padding * 2);
-  max-width: calc(1200px - $list-padding * 2);
-  padding: $list-padding;
+    $list-padding: 1rem;
+    height: calc(100% - $search-container-height - $list-padding * 2);
+    width: calc(100% - $list-padding * 2);
+    min-width: calc(325px - $list-padding * 2);
+    max-width: calc(1200px - $list-padding * 2);
+    padding: $list-padding;
+
+    $list-details-height: 15px;
+    .list {
+        height: calc(100% - $list-details-height);
+        border: solid rgba(128, 128, 128, 0.2) 1px;
+        border-radius: 5px;
+        overflow-y: auto;
+        overflow-x: hidden;
+        cdk-virtual-scroll-viewport {
+            height: 100%;
+            width: 100%;
+            ::ng-deep .cdk-virtual-scroll-content-wrapper {
+                max-width: 100% !important;
+            }
+        }
+        .item {
+            height: 120px;
+            width: 100%;
+            border: solid rgba(128, 128, 128, 0.2) 1px;
+        }
+    }
+    .list-details {
+        @include flex-row-center();
+        height: $list-details-height;
+        font-size: 11px;
+        color: grey;
+        border: solid rgba(128, 128, 128, 0.2) 1px;
+        border-radius: 0 0 5px 5px;
+    }
 }
