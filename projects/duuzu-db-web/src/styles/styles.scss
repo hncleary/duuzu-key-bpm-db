@@ -36,23 +36,6 @@ $duuzu-db-web-theme: mat.define-theme(
 // Comment out the line below if you want to use the deprecated `color` inputs.
 // @include mat.color-variants-backwards-compatibility($duuzu-db-web-theme);
 
-@mixin flex-row-center {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-}
-@mixin flex-col-center {
-  @include flex-row-center();
-  flex-direction: column;
-}
-@mixin text-truncate {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  width: 100%;
-}
-
 html,
 body {
   height: 100%;
