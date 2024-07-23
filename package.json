@@ -14,5 +14,9 @@
     "parse-db": "npm run parse-db -w duuzu-db-parser"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "@angular/material": "^18.1.1",
+    "ngx-mat-searchbar": "^1.0.6"
+  }
 }

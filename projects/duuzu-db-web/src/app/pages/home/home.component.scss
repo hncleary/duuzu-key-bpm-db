@@ -1,0 +1,26 @@
+@import "../../../styles/styles.scss";
+
+:host {
+  width: 100%;
+  @include flex-col-center();
+}
+
+$search-container-height: 100px;
+
+.search-container {
+  $search-padding: 1rem;
+  height: calc($search-container-height - $search-padding * 2);
+  width: calc(100% - $search-padding * 2);
+  min-width: calc(325px - $search-padding * 2);
+  max-width: calc(700px - $search-padding * 2);
+  padding: $search-padding;
+}
+
+.list-container {
+  $list-padding: 1rem;
+  height: calc(100% - $search-container-height - $list-padding * 2);
+  width: calc(100% - $list-padding * 2);
+  min-width: calc(325px - $list-padding * 2);
+  max-width: calc(1200px - $list-padding * 2);
+  padding: $list-padding;
+}
