@@ -1,27 +1,27 @@
 :host {
-  height: 100%;
-  width: 100%;
-  padding: 0px;
+    height: 100%;
+    width: 100%;
+    padding: 0px;
 }
-$header-height: 100px;
+$header-height: 135px;
 $footer-height: 30px;
 
 .header-container {
-  height: $header-height;
+    height: $header-height;
 }
 
 .main-content-container {
-  width: 100%;
-  height: calc(100% - $header-height - $footer-height - 0.3rem);
+    width: 100%;
+    height: calc(100% - $header-height - $footer-height - 0.3rem);
 }
 
 .footer-container {
-  height: $footer-height;
-  width: 100%;
+    height: $footer-height;
+    width: 100%;
 }
 
 mat-divider {
-  width: calc(100% - 1rem);
-  margin: auto;
-  color: lightgray;
+    width: calc(100% - 1rem);
+    margin: auto;
+    color: lightgray;
 }

@@ -1,35 +1,42 @@
-@import "../../../styles/mixins.scss";
+@import '../../../styles/mixins.scss';
 
 $tabs-height: 48px;
 
 .header-title-container {
-  @include flex-row-center();
-  height: calc(100% - $tabs-height);
-  h3 {
-    margin: 0;
-  }
+    @include flex-row-center();
+    height: calc(100% - $tabs-height);
+    h3 {
+        margin: 0;
+    }
+
+    .icon {
+        height: 36px;
+    }
+    .logo {
+        height: calc(100% - 1rem);
+    }
 }
 
 .tabs-container {
-  background-color: #4a4a4a;
-  width: 100%;
-  height: $tabs-height;
-  .tab-link {
-    transition: 0.2s;
-    .tab-display-container {
-      @include flex-row-center();
-      color: rgb(198, 198, 198);
-      gap: 0.3rem;
-      mat-icon {
-        font-size: 20px;
-        margin-top: 3px;
-      }
+    background-color: #4a4a4a;
+    width: 100%;
+    height: $tabs-height;
+    .tab-link {
+        transition: 0.2s;
+        .tab-display-container {
+            @include flex-row-center();
+            color: rgb(198, 198, 198);
+            gap: 0.3rem;
+            mat-icon {
+                font-size: 20px;
+                margin-top: 3px;
+            }
+        }
+        &.selected-tab {
+            border-bottom: 5px solid white;
+            .tab-display-container {
+                color: white;
+            }
+        }
     }
-    &.selected-tab {
-      border-bottom: 5px solid white;
-      .tab-display-container {
-        color: white;
-      }
-    }
-  }
 }

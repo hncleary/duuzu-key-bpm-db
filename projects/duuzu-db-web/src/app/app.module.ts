@@ -24,6 +24,7 @@ import { ScrollingModule } from '@angular/cdk/scrolling';
 import { GenericFilterPipe } from './pipes/generic-filter.pipe';
 import { SongDetailsComponent } from './pages/home/song-details/song-details.component';
 import { TruncationTipDirective } from './directives/truncation-tip.directive';
+import { MatChipsModule } from '@angular/material/chips';
 
 @NgModule({
     declarations: [
@@ -54,6 +55,7 @@ import { TruncationTipDirective } from './directives/truncation-tip.directive';
         AppRoutingModule,
         NgxMatSearchbarModule,
         ScrollingModule,
+        MatChipsModule,
     ],
     providers: [
         MatTooltip,

@@ -10,14 +10,34 @@ $actions-container-width: 150px;
 
 .details-container {
     height: 100%;
-    width: calc(100% - $actions-container-width);
-    padding: 0.3rem;
+    width: calc(100% - $actions-container-width - 1rem);
+    padding: 0.5rem;
     position: relative;
     @include flex-col-center();
-    .line {
+    gap: 0.5rem;
+    .full-line {
         width: 100%;
+        max-width: 100%;
         position: relative;
         line-clamp: 1;
+        @include flex-row-center();
+        justify-content: flex-start;
+        gap: 0.5rem;
+    }
+    .multi-item-line {
+        @include flex-row-center();
+        justify-content: flex-start;
+        width: 100%;
+        gap: 0.3rem;
+        .line-item {
+            @include flex-row-center();
+            gap: 0.3rem;
+        }
+    }
+    .chip {
+        background-color: whitesmoke;
+        padding: 0.2rem 0.5rem;
+        border-radius: 40%;
     }
     font-size: 0.9rem;
 }
