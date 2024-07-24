@@ -2,10 +2,25 @@
 
 :host {
     @include flex-col-center();
+    padding: 1rem;
+    p {
+        text-align: center;
+    }
 }
 
 .about-container {
     @include flex-col-center();
     padding: 1rem;
-    width: 350px;
+    min-width: 350px;
+    max-width: 500px;
+    width: 100%;
+    border: solid lightgrey 1px;
+    border-radius: 3px;
+    gap: 0.5rem;
+}
+
+mat-divider {
+    background-color: lightgrey;
+    width: 100%;
+    opacity: 0.3;
 }
