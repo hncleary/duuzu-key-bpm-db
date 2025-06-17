@@ -19,6 +19,11 @@ export class HeaderComponent implements OnInit {
             icon: 'queue_music',
         },
         {
+            route: PAGE_ROUTES.CHANGELOG,
+            displayName: 'Updates',
+            icon: 'newspaper',
+        },
+        {
             route: PAGE_ROUTES.ABOUT,
             displayName: 'About',
             icon: 'info',
