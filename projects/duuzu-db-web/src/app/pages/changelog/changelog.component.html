@@ -1,0 +1,21 @@
+<mat-card appearance="outlined">
+    <mat-card-title> Updates </mat-card-title>
+    <mat-divider></mat-divider>
+    @for(entry of entries; track $index) {
+    <div class="entry-header-row">
+        <h3>
+            {{ entry.date }}
+        </h3>
+        <p>
+            {{ entry.version }}
+        </p>
+    </div>
+    <div class="updates-container">
+        <ul>
+            @for(update of entry.updates; track $index) {
+            <li>{{ update }}</li>
+            }
+        </ul>
+    </div>
+    }
+</mat-card>

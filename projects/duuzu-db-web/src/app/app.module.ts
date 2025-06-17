@@ -30,7 +30,6 @@ import { MatChipsModule } from '@angular/material/chips';
     declarations: [
         AppComponent,
         HomeComponent,
-        AboutComponent,
         FooterComponent,
         HeaderComponent,
         GenericFilterPipe,
