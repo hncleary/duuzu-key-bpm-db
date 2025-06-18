@@ -1,55 +1,55 @@
 <div class="details-container">
-  <div class="full-line" appTruncationTip>
-    <b>Song Name</b>
-    {{ details.name }}
-  </div>
-  <div class="full-line" appTruncationTip>
-    <b>Artist</b>
-    <p>{{ details.artist }}</p>
-  </div>
-  @if(!!details.source) {
-  <div class="full-line" appTruncationTip>
-    <b>Source</b>
-    {{ details.source }}
-  </div>
-  }
-  <div class="multi-item-line">
-    <div class="line-item" appTruncationTip>
-      <b>Main Key</b>
-      <ng-container *ngFor="let key of details.mainKeys">
-        <div class="chip">{{ key }}</div>
-      </ng-container>
+    <div class="full-line" appTruncationTip>
+        <b>Song Name</b>
+        {{ details.name }}
     </div>
-    @if(details.subKeys.length > 0) {
-    <div class="line-item" appTruncationTip>
-      <b>Sub-Keys</b>
-      <ng-container *ngFor="let key of details.subKeys">
-        <div class="chip">{{ key }}</div>
-      </ng-container>
+    <div class="full-line" appTruncationTip>
+        <b>Artist</b>
+        <p>{{ details.artist }}</p>
+    </div>
+    @if(!!details.source) {
+    <div class="full-line" appTruncationTip>
+        <b>Source</b>
+        {{ details.source }}
     </div>
     }
-    <div class="line-item" appTruncationTip>
-      <b>BPM</b>
-      <ng-container *ngFor="let bpm of details.bpms">
-        <div class="chip">{{ bpm }}</div>
-      </ng-container>
-    </div>
-    @if(!!details.type) {
-    <div class="line-item" appTruncationTip>
-      <b>Type</b>
-      {{ details.type }}
-    </div>
-    }
-  </div>
+    <div class="multi-item-line">
+        <div class="line-item" appTruncationTip>
+            <b>Main Key</b>
+            @for(key of details.mainKeys; track $index) {
+            <div class="chip">{{ key }}</div>
 
+            }
+        </div>
+        @if(details.subKeys.length > 0) {
+        <div class="line-item" appTruncationTip>
+            <b>Sub-Keys</b>
+            @for(key of details.subKeys; track $index) {
+            <div class="chip">{{ key }}</div>
+            }
+        </div>
+        }
+        <div class="line-item" appTruncationTip>
+            <b>BPM</b>
+            @for(bpm of details.bpms; track $index) {
+            <div class="chip">{{ bpm }}</div>
+            }
+        </div>
+        @if(!!details.type) {
+        <div class="line-item" appTruncationTip>
+            <b>Type</b>
+            {{ details.type }}
+        </div>
+        }
+    </div>
 </div>
 
 <mat-divider [vertical]="true"></mat-divider>
 
 <div class="actions-container">
-  <!-- Youtube Search Button -->
-  <button mat-raised-button (click)="onYoutubeSearchClick()" matTooltip="Search for this song on YouTube">
-    <mat-icon>search</mat-icon>
-    YouTube
-  </button>
+    <!-- Youtube Search Button -->
+    <button mat-raised-button (click)="onYoutubeSearchClick()" matTooltip="Search for this song on YouTube">
+        <mat-icon>search</mat-icon>
+        YouTube
+    </button>
 </div>
